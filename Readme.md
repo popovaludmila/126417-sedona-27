@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Людмила Попова](https://up.htmlacademy.ru/htmlcss/27/user/126417).
-* Наставник: [Ярослав Макаренко](https://htmlacademy.ru/profile/id234926).
+* Наставник:[Ярослав Макаренко](https://htmlacademy.ru/profile/id234926).
 
 ---
 
