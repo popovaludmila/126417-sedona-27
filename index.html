@@ -86,7 +86,25 @@
       <p>Укажите предполагаемые даты поездки,<br>
          и мы покажем вам лучшие предложения гостиниц в Cедоне  </p>
       <button type="button">Поиск гостиницы в Седоне</button>
-      <!--Здесь будет форма-->
+      <form action="https://echo.htmlacademy.ru" method="POST">
+      <p>
+        <label for="datein">Дата заезда:</label>
+        <input type="date" name="datein" id="datein">
+      </p>
+      <p>
+        <label for="dateout">Дата выезда:</label>
+        <input type="date" name="dateout" id="dateout">
+      </p>
+      <p>
+      <label for="adults">Взрослые:</label>
+      <input type="number" name="adults" id="adults" min="0" value="2">
+      <label for="children">Дети:</label>
+      <input type="number" name="children" id="children" min="0" value="0">
+    </p>
+    <p>
+      <a href="catalog.html">Найти</a>
+    </p>
+      </form>
     </section>
 
     <section>
