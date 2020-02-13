@@ -10,16 +10,18 @@
 </head>
 
 <body>
-  <header>
-    <nav>
-      <ul>
+  <header class="header">
+    <nav class="nav">
+      <ul class="site-nav">
         <li><a href="#">Информация</a></li>
         <li><a href="#">Фото и видео</a></li>
         <li><a href="#">Карта штата</a></li>
         <li><a href="#"> Гостиницы</a></li>
       </ul>
     </nav>
-    <a href="index.html"><img src="img/logo-sedona.svg" width="138" height="71" alt="Логотип Седоны"></a>
+    <a href="index.html" class="logo">
+      <img src="img/logo-sedona.svg" width="138" height="71" alt="Логотип Седоны">
+    </a>
   </header>
 
   <main>
@@ -75,8 +77,8 @@
       </form>
     </section>
     <section>
-      <h2>Сортировка</h2>
       <p>Найдено:<span>3</span></p>
+      <h2>Сортировка</h2>
       <ul>
         <li><a href="">По цене</a></li>
         <li><a href="">По типу</a></li>
@@ -133,15 +135,15 @@
     </section>
   </main>
 
-  <footer>
-    <p>
+  <footer class="footer">
+    <p class="footer-contacts">
       <a href="#">#visitSEDONA</a>
       <p>ТЕЛ: +7(495) 666-01-66</p>
     </p>
-    <div>
+    <div class="footer-social">
       <h2 class="visually-hidden">Седона в соцсетях</h2>
-      <ul>
-        <li>
+      <ul class="social-list">
+        <li class="social-button">
           <a href="#" aria-label="Твиттер">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15"
               viewBox="0 0 17 15">
@@ -150,14 +152,14 @@
             </svg>
           </a>
         </li>
-        <li>
+        <li class="social-button">
           <a href="#" aria-label="Фейсбук"></a>
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22">
               <path fill="#FFF" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" />
             </svg>
           </a>
         </li>
-        <li>
+        <li class="social-button">
           <a href="#" aria-label="Ютуб">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16"
               viewBox="0 0 20 16">
@@ -168,7 +170,7 @@
         </li>
       </ul>
     </div>
-    <p>
+    <p class="footer-copyright">
       Website by
       <a href="https://htmlacademy.ru">
         <img src="img/logo-htmlacademy.svg" width="104" height="26" alt="Логотип HTML Academy">

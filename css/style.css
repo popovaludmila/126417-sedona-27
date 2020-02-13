@@ -1,0 +1,313 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+  text-transform: uppercase;
+
+  background-color: #F2F2F2;
+  background-position: top center;
+}
+
+a {
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/* Header
+=================== */
+
+.header {
+  background-color: #FFFFFF;
+}
+
+.site-nav,
+.features-list,
+.social-list {
+  list-style: none;
+}
+
+.nav {
+
+  font-weight: 700;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.site-nav a {
+  color: #000000;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  color: #81B3D2;
+}
+
+.site-nav a:active {
+  color: #B2B2B2;
+}
+
+/* Main
+================ */
+
+.container {
+  background-color: #FFFFFF;
+  text-align: center;
+}
+
+.intro {
+  background-color: #27404E;
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.box {
+  background-color: #FFFFFF;
+}
+
+.title {
+  color: #000000;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #333333;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.title-white,
+.subtitle-white {
+  color: #FFFFFF
+}
+
+.feature-item {
+  background-color: #FFFFFF;
+}
+
+.feature-item-blue {
+  background-color: #81B3D2;
+  color: #FFFFFF;
+}
+
+.features-list-one {
+  background-color: #FFFFFF;
+}
+
+.feature-item-grey {
+  background-color: #EEEEEE;
+}
+
+.pic {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.pic-one {
+  width: 75px;
+  height: 72px;
+  background-image: url("../img/icon-1.svg");
+
+}
+
+.pic-two {
+  width: 75px;
+  height: 70px;
+  background-image: url("../img/icon-2.svg");
+}
+
+.pic-three {
+  width: 64px;
+  height: 77px;
+  background-image: url("../img/icon-3.svg");
+}
+
+.search {
+  background-color: #FFFFFF;
+
+}
+
+.search strong {
+  color: #000000;
+  font-size: 30px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.search p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #333333;
+}
+
+/* Button
+=============== */
+
+.btn {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  color: #FFFFFF;
+}
+
+.btn-brown {
+  background-color: #766357;
+  width: 568px;
+  height: 86px;
+}
+
+.btn-brown:hover,
+.btn-brown:focus {
+  background-color: #604E43;
+}
+
+.btn-brown:active {
+  background-color: #503E33;
+  color: #847870;
+}
+
+
+.btn-blue {
+  background-color: #81B3D2;
+}
+
+.btn-blue:hover,
+.btn-blue:focus {
+  background-color: #669EC0;
+}
+
+.btn-blue:active {
+  background-color: #5496BD;
+  color: #87B5D0;
+}
+
+.btn-calend {
+  background-image: url("../img/calendar.svg");
+  background-repeat: no-repeat;
+  width: 23px;
+  height: 23px;
+}
+
+.btn-calend svg:hover,
+.btn-calend svg:focus {
+  fill: #000000;
+}
+
+.btn-calend svg:active {
+  fill: #81B3D2;
+}
+
+.btn-count {
+  background-color: #F2F2F2;
+  color: #A9A9A9;
+  font-size: 14px;
+}
+
+.btn-count:hover,
+.btn-count:focus {
+  color: #000000;
+}
+
+.btn-count:hover{
+  background-color: #EBEBEB;
+}
+
+.btn-count:active {
+  color: #87B5D0;
+  background-color: #FFFFFF;
+  border: 1px solid #E5E5E5;
+}
+
+/* Footer
+============== */
+
+.footer {
+  font-size: 21px;
+  color: #000000;
+  line-height: 26px;
+  font-weight: 700;
+
+  background-color: #FFFFFF;
+}
+
+.footer-contacts a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  list-style: none;
+}
+
+.social-button {
+  background-color: #81B3D2;
+  width: 46px;
+  height: 48px;
+}
+
+.social-button:hover,
+.social-button:focus {
+  background-color: #669EC0;
+}
+
+.social-button:active {
+  background-color: #5496BD;
+}
+
+.social-button svg:active {
+  fill: #87B5D0;
+}
+
+/* Modal
+=============*/
+.modal-search {
+  font-size: 14px;
+  color: #000000;
+  font-weight: 700;
+
+  background-color: #FFFFFF;
+}
+
+.search-form input{
+  background-color: #F2F2F2;
+}
+
+.search-form input:hover,
+.search-form input:focus{
+  background-color: #EBEBEB;
+}
+
+.search-form input:active {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E5E5;
+}
+
+
