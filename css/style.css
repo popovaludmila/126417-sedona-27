@@ -20,6 +20,7 @@ a {
 *::after {
   box-sizing: border-box;
 }
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -61,6 +62,10 @@ a {
   color: #B2B2B2;
 }
 
+.site-nav .current-link {
+  color: #766357;
+}
+
 /* Main
 ================ */
 
@@ -87,7 +92,7 @@ a {
   font-weight: 700;
 }
 
-.subtitle {
+.text {
   color: #333333;
   font-size: 14px;
   line-height: 26px;
@@ -95,7 +100,7 @@ a {
 }
 
 .title-white,
-.subtitle-white {
+.text-white {
   color: #FFFFFF
 }
 
@@ -176,8 +181,6 @@ a {
 
 .btn-brown {
   background-color: #766357;
-  width: 568px;
-  height: 86px;
 }
 
 .btn-brown:hover,
@@ -232,7 +235,7 @@ a {
   color: #000000;
 }
 
-.btn-count:hover{
+.btn-count:hover {
   background-color: #EBEBEB;
 }
 
@@ -282,8 +285,17 @@ a {
   background-color: #5496BD;
 }
 
-.social-button svg:active {
+.social-button path:active {
   fill: #87B5D0;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  color: #81B3D2;
+}
+
+.site-nav a:active {
+  color: #B2B2B2;
 }
 
 /* Modal
@@ -296,12 +308,12 @@ a {
   background-color: #FFFFFF;
 }
 
-.search-form input{
+.search-form input {
   background-color: #F2F2F2;
 }
 
 .search-form input:hover,
-.search-form input:focus{
+.search-form input:focus {
   background-color: #EBEBEB;
 }
 
@@ -310,4 +322,224 @@ a {
   border: 1px solid #E5E5E5;
 }
 
+/* Catalog.html
+================== */
 
+.filter-options,
+.filter-result,
+.filter-list,
+.sorting,
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-container {
+  background-color: #FFFFFF;
+}
+
+.filters {
+  background-color: #27404E;
+  background-image: url("../img/filter\ background.jpg");
+  background-repeat: no-repeat;
+
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.filter legend {
+  font-size: 16px;
+  font-weight: 700;
+  ;
+}
+
+.filter-options input[type="checkbox"] {
+  display: none;
+}
+
+.filter-options label:before {
+  content: url("../img/checkbox-off.svg");
+}
+
+.filter-options input:checked+label:before {
+  content: url("../img/checkbox-on.svg");
+}
+
+.filter-price-box {
+  border: 2px solid #FFFFFF;
+  width: 318px;
+  height: 36px;
+}
+
+.filter-price-box input {
+  background: transparent;
+  border: none;
+  width: 40px;
+  height: 34px;
+}
+
+.filter-price-box input[value] {
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+/*
+.price-per-day::after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 22px;
+  background-color: #FFFFFF;
+}
+*/
+
+/* Button
+============ */
+.btn-filter {
+  background: transparent;
+  border: 2px solid #FFFFFF;
+
+  font-size: 14px;
+  list-style: 21px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.btn-filter:hover,
+.btn-filter:focus {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+/* Section: .filter-result
+==================== */
+.filter-result p {
+  color: #000000;
+
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.filter-result h2,
+.filter-list a {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.filter-result h2 {
+  color: #000000;
+}
+
+.filter-list a {
+  color: #B2B2B2;
+  text-decoration: none;
+  border-bottom: 1px dashed #81B3D2;
+}
+
+.filter-list a:hover,
+.filter-list a:focus {
+  color: #81B3D2;
+}
+
+.filter-list a:active {
+  border: none;
+  color: #81B3D2;
+}
+
+a.current-result {
+  border: none;
+  color: #81B3D2;
+}
+
+a.sorting-icon path:hover,
+a.sorting-icon path:focus {
+  fill: #000000;
+}
+
+a.sorting-icon path:active {
+  fill: #81B3D2;
+}
+
+a.sorting-icon-current path {
+  fill: #81B3D2;
+}
+
+/* Section: catalog
+ ==================== */
+.catalog-item {
+  color: #000000;
+
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.catalog-title {
+  color: #000000;
+
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.stars {
+  display: block;
+  background-image: url("../img/star.svg");
+  background-repeat: space;
+
+  height: 17px;
+}
+
+.stars-four {
+  width: 89px;
+}
+
+.stars-three {
+  width: 65px;
+}
+
+.stars-two {
+  width: 42px;
+}
+
+.catalog-item a {
+  color: #FFFFFF;
+
+  font-weight: 700;
+}
+
+.catalog-more {
+  background-color: #81B3D2;
+}
+
+.catalog-more:hover,
+.catalog-more:focus {
+  background-color: #669EC0;
+}
+
+.catalog-more:active {
+  background-color: #5496BD;
+  color: #87B5D0;
+}
+
+.catalog-reservation {
+  background-color: #766357;
+}
+
+.catalog-reservation:hover,
+.catalog-reservation:focus {
+  background-color: #604E43;
+}
+
+.catalog-reservation:active {
+  background-color: #503E33;
+  color: #847870;
+}
