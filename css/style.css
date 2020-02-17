@@ -96,11 +96,19 @@ a {
   font-weight: 700;
 }
 
+.box .title {
+  line-height: 26px;
+}
+
 .text {
   color: #333333;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+}
+
+.box .text {
+  line-height: 26px;
 }
 
 .title-white,
@@ -314,6 +322,7 @@ a {
   font-size: 14px;
   color: #000000;
   font-weight: 700;
+  line-height: 26px;
 
   background-color: #FFFFFF;
 }
@@ -485,8 +494,6 @@ a.sorting-icon-current path {
 /* Section: catalog
  ==================== */
 .catalog-item {
-  color: #000000;
-
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -526,6 +533,10 @@ a.sorting-icon-current path {
   font-weight: 700;
 }
 
+.catalog-item p {
+  color: #333333;
+}
+
 .catalog-more {
   background-color: #81B3D2;
 }
@@ -552,4 +563,9 @@ a.sorting-icon-current path {
 .catalog-reservation:active {
   background-color: #503E33;
   color: #847870;
+}
+
+.catalog-rating {
+  color: #666666;
+  background-color: #F2F2F2;
 }
