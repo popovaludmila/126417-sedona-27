@@ -53,7 +53,9 @@ a {
 .site-nav,
 .features-list,
 .features-list-one,
-.social-list {
+.social-list,
+.filter-options,
+fieldset {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -401,7 +403,8 @@ a {
 
 .btn-calend svg:hover,
 .btn-calend svg:focus {
-  background-image: url("../img/calendar2.svg");;
+  background-image: url("../img/calendar2.svg");
+  ;
 }
 
 .btn-calend svg:active {
@@ -567,6 +570,7 @@ a {
   width: 346px;
   height: 38px;
   text-align: left;
+  padding-left: 13px;
 }
 
 .number {
@@ -632,12 +636,37 @@ a {
   background-color: #27404E;
   background-image: url("../img/filter\ background.jpg");
   background-repeat: no-repeat;
+  background-position: 50% 20%;
 
   color: #FFFFFF;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
   text-transform: uppercase;
+
+  width: 1200px;
+  height: 220px;
+}
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding-top: 30px;
+  padding-bottom: 34px;
+  padding-right: 72px;
+  padding-left: 64px;
+
+}
+
+.filter-group-one {
+  display: flex;
+  flex-direction: row;
+}
+
+.filter-facilities {
+  margin-right: 110px;
 }
 
 .filter fieldset {
@@ -647,7 +676,19 @@ a {
 .filter legend {
   font-size: 16px;
   font-weight: 700;
-  ;
+}
+.filter-option {
+  height: 23px;
+}
+
+.filter-options,
+.filter-option {
+  margin-top: 25px;
+}
+
+.filter-option label {
+  vertical-align: top;
+  margin-top: 3px;
 }
 
 .filter-options input[type="checkbox"] {
@@ -656,16 +697,44 @@ a {
 
 .filter-options label:before {
   content: url("../img/checkbox-off.svg");
+  width: 23px;
+  height: 23px;
+  padding-right: 15px;
 }
 
 .filter-options input:checked+label:before {
   content: url("../img/checkbox-on.svg");
+  width: 27px;
+  height: 23px;
+}
+
+.filter-price legend {
+  margin-bottom: 10px;
 }
 
 .filter-price-box {
   border: 2px solid #FFFFFF;
   width: 318px;
   height: 36px;
+
+  position: relative;
+}
+
+.filter-price-box label {
+  margin-left: 64px;
+  margin-top: 10px;
+}
+
+.filter-price-box label::after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 22px;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  z-index: 1;
 }
 
 .filter-price-box input {
@@ -680,16 +749,6 @@ a {
   font-size: 14px;
 }
 
-/*
-.price-per-day::after {
-  content: "";
-  display: block;
-  width: 2px;
-  height: 22px;
-  background-color: #FFFFFF;
-}
-*/
-
 /* Button
 ============ */
 .btn-filter {
@@ -700,6 +759,11 @@ a {
   list-style: 21px;
   text-transform: uppercase;
   color: #FFFFFF;
+
+  display: block;
+  width: 137px;
+  height: 36px;
+  margin: 32px auto 36px;
 }
 
 .btn-filter:hover,
