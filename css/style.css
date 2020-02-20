@@ -43,7 +43,6 @@ a {
 
 .header {
   width: 1200px;
-  height: 56px;
 
   position: relative;
 
@@ -68,13 +67,13 @@ a {
 .site-nav {
   display: flex;
   align-items: center;
-  height: 56px;
-
 }
 
 .site-nav li {
   padding-left: 72px;
   padding-right: 72px;
+  padding-top: 14px;
+  padding-bottom: 16px;
 }
 
 .logo {
@@ -118,6 +117,7 @@ a {
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  background-position: 0 -56px;
 
   position: relative;
   height: 724px;
@@ -199,7 +199,6 @@ a {
   color: #FFFFFF;
 
   width: 1200px;
-  height: 256px;
 
   display: flex;
 }
@@ -216,12 +215,14 @@ a {
 .features-list-one {
   background-color: #FFFFFF;
 
-  height: 330px;
   width: 1200px;
 
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  padding-top: 60px;
+  padding-bottom: 70px;
 }
 
 .features-list-one li:first-child {
@@ -246,8 +247,9 @@ a {
   align-items: center;
 
   width: 1200px;
-  height: 256px;
 
+  padding-top: 43px;
+  padding-bottom: 46px;
   background-color: #EEEEEE;
 }
 
@@ -308,7 +310,6 @@ a {
 
 .search {
   background-color: #FFFFFF;
-  height: 291px;
   width: 1200px;
 }
 
@@ -646,7 +647,6 @@ fieldset {
   text-transform: uppercase;
 
   width: 1200px;
-  height: 220px;
 
   border-bottom: 1px solid transparent;
 }
