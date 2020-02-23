@@ -677,6 +677,7 @@ fieldset {
 .filter {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   padding-top: 30px;
@@ -689,10 +690,11 @@ fieldset {
 .filter-group-one {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .filter-facilities {
-  margin-right: 110px;
+  padding-right: 110px;
 }
 
 .filter fieldset {
@@ -702,15 +704,17 @@ fieldset {
 .filter legend {
   font-size: 16px;
   font-weight: 700;
+
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .filter-option {
-  height: 23px;
+
 }
 
-.filter-options,
 .filter-option {
-  margin-top: 25px;
+  padding-top: 25px;
 }
 
 .filter-option label {
@@ -724,9 +728,10 @@ fieldset {
 
 .filter-options label:before {
   content: url("../img/checkbox-off.svg");
+  display: inline-block;
   width: 23px;
   height: 23px;
-  padding-right: 15px;
+  margin-right: 15px;
 }
 
 .filter-options input:checked+label:before {
@@ -735,21 +740,16 @@ fieldset {
   height: 23px;
 }
 
-.filter-price legend {
-  margin-bottom: 10px;
-}
-
 .filter-price-box {
   border: 2px solid #FFFFFF;
   width: 318px;
-  height: 36px;
+  margin-top: 10px;
 
   position: relative;
 }
 
 .filter-price-box label {
-  margin-left: 64px;
-  margin-top: 10px;
+  padding-left: 64px;
 }
 
 .filter-price-box label::after {
@@ -783,13 +783,15 @@ fieldset {
   border: 2px solid #FFFFFF;
 
   font-size: 14px;
-  list-style: 21px;
+  line-height: 21px;
   text-transform: uppercase;
   color: #FFFFFF;
 
   display: block;
   width: 137px;
-  height: 36px;
+
+  padding-top: 5px;
+  padding-bottom: 5px;
   margin: 32px auto 36px;
 }
 
