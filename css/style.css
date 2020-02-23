@@ -353,6 +353,7 @@ a {
   text-transform: uppercase;
   text-align: center;
   color: #FFFFFF;
+  word-wrap: break-word;
 
   display: block;
 }
@@ -381,8 +382,10 @@ a {
   background-color: #81B3D2;
 
   width: 458px;
-  height: 58px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   margin: 55px auto;
+  margin-bottom: 0;
 }
 
 .btn-blue:hover,
@@ -556,11 +559,15 @@ a {
   background-color: #FFFFFF;
 
   width: 568px;
-  height: 395px;
 }
 
 .search-form {
   padding: 55px;
+}
+
+.search-form p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .search-form input {
