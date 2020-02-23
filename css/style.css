@@ -33,9 +33,7 @@ a {
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  box-shadow: 0 2px 4px #979797;
 }
 
 /* Header
@@ -44,9 +42,10 @@ a {
 .header {
   width: 1200px;
 
+  background-color: #FFFFFF;
+
   position: relative;
 
-  background-color: #FFFFFF;
 }
 
 .site-nav,
@@ -62,18 +61,26 @@ a {
   font-weight: 700;
   line-height: 26px;
   font-size: 14px;
+
+  padding-left: 72px;
+  padding-right: 72px;
+  padding-top: 14px;
+  padding-bottom: 16px;
 }
 
 .site-nav {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .site-nav li {
-  padding-left: 72px;
-  padding-right: 72px;
-  padding-top: 14px;
-  padding-bottom: 16px;
+  flex-grow: 1;
+}
+
+.site-nav li:nth-child(3) {
+  margin-left: auto;
 }
 
 .logo {
@@ -81,10 +88,6 @@ a {
   top: 0;
   left: 530px;
   z-index: 1;
-}
-
-.site-nav li:nth-child(2) {
-  margin-right: auto;
 }
 
 .site-nav a {
@@ -116,23 +119,24 @@ a {
   background-color: #27404E;
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
-  background-position: center;
   background-position: 0 -56px;
 
-  position: relative;
-  height: 724px;
   width: 1200px;
+  min-height: 724px;
+  position: relative;
 }
 
 .intro-img {
   margin: 80px 0;
+  margin-top: 76px;
 }
 
 .intro::after {
   content: url("../img/polygon.png");
 
+  height: 57px;
   position: absolute;
-  bottom: 210px;
+  top: 457px;
   left: 0;
   z-index: 1;
 }
@@ -140,13 +144,7 @@ a {
 .box {
   background-color: #FFFFFF;
 
-  height: 216px;
-  width: 1200px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 1;
-
+  min-height: 216px;
 }
 
 .title {
@@ -154,12 +152,16 @@ a {
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 29px;
 }
 
 .box .title {
   line-height: 26px;
 
-  margin-top: 58px;
+  padding-top: 58px;
 }
 
 .text {
@@ -167,12 +169,16 @@ a {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 29px;
 }
 
 .box .text {
   line-height: 26px;
 
-  margin-bottom: 52px;
+  padding-bottom: 51px;
 }
 
 .title-white,
@@ -192,6 +198,7 @@ a {
 
 .feature-item {
   background-color: #FFFFFF;
+  word-wrap: break-word;
 }
 
 .feature-item-blue {
@@ -199,8 +206,10 @@ a {
   color: #FFFFFF;
 
   width: 1200px;
+  min-height: 256px;
 
   display: flex;
+  flex-wrap: wrap;
 }
 
 .feature-text-white {
@@ -220,9 +229,14 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 
   padding-top: 60px;
   padding-bottom: 70px;
+}
+
+.features-list-one li {
+  border: 1px solid transparent;
 }
 
 .features-list-one li:first-child {
@@ -237,24 +251,27 @@ a {
   width: 303px;
 }
 
-.feature-item-one .titletext {
-  margin-bottom: 0;
+.feature-item-one .title {
+  padding-top: 29px;
+  padding-bottom: 0;
 }
 
 .feature-item-grey {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 
   width: 1200px;
 
-  padding-top: 43px;
-  padding-bottom: 46px;
+  padding-top: 44px;
+  padding-bottom: 50px;
   background-color: #EEEEEE;
 }
 
 .feature-item-grey li {
   background-color: #EEEEEE;
+  border: 1px solid transparent;
 }
 
 .feature-item-grey li:first-child {
@@ -270,17 +287,8 @@ a {
 }
 
 .feature-item-grey .title {
-  display: block;
-  width: 130px;
+  width: 140px;
   margin: 0 auto;
-  margin-bottom: 25px;
-
-  text-align: center;
-}
-
-.feature-item-grey .text {
-  margin-top: 25px;
-  margin-bottom: 0;
 }
 
 .pic {
@@ -311,11 +319,12 @@ a {
 .search {
   background-color: #FFFFFF;
   width: 1200px;
+  border-top: 1px solid transparent;
 }
 
 .search-text {
-  line-height: 24px;
   padding-top: 55px;
+  padding-bottom: 35px;
 }
 
 .search strong {
@@ -329,8 +338,9 @@ a {
   font-weight: 400;
   color: #333333;
 
-  margin-top: 33px;
-  margin-bottom: 40px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 30px;
 }
 
 /* Button
@@ -351,8 +361,8 @@ a {
   background-color: #766357;
 
   width: 568px;
-  height: 86px;
-  padding: 30px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
   margin: 0 auto;
 }
 
@@ -446,31 +456,36 @@ a {
   font-weight: 700;
 
   background-color: #FFFFFF;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding-left: 140px;
+  padding-right: 101px;
+  padding-top: 36px;
+  padding-bottom: 36px;
 }
 
-.footer-inner {
-  display: flex;
-  align-items: center;
-
-  margin-left: 140px;
-  margin-right: 101px;
+.footer p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .footer-contacts a {
   text-decoration: none;
   color: #000000;
-  margin-right: 145px;
 }
 
 .footer-social {
-  height: 48px;
-  margin-right: 213px;
+  padding-right: 80px;
 }
 
 .social-list {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .social-list li:last-child {
@@ -492,6 +507,7 @@ a {
   width: 46px;
   height: 48px;
   margin-right: 5px;
+  margin-bottom: 5px;
 }
 
 .social-button:hover,
@@ -544,7 +560,7 @@ a {
 }
 
 .search-form {
-  margin: 55px;
+  padding: 55px;
 }
 
 .search-form input {
@@ -680,6 +696,7 @@ fieldset {
   font-size: 16px;
   font-weight: 700;
 }
+
 .filter-option {
   height: 23px;
 }
@@ -898,7 +915,7 @@ a.sorting-icon-current path {
   line-height: 21px;
   font-weight: 400;
 
-  border-bottom:1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
 
   display: flex;
   justify-content: space-between;
@@ -909,6 +926,7 @@ a.sorting-icon-current path {
   padding-left: 72px;
 
 }
+
 .catalog-info {
   display: flex;
   flex-direction: row;
@@ -965,6 +983,7 @@ a.sorting-icon-current path {
 .catalog-more {
   background-color: #81B3D2;
 
+  display: inline-block;
   padding: 3px 16px;
   margin-right: 7px;
 }
@@ -982,6 +1001,7 @@ a.sorting-icon-current path {
 .catalog-reservation {
   background-color: #766357;
 
+  display: inline-block;
   padding: 3px 16px;
 }
 
@@ -994,6 +1014,7 @@ a.sorting-icon-current path {
   background-color: #503E33;
   color: #847870;
 }
+
 .catalog-rating {
   display: flex;
   flex-direction: column;
