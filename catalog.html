@@ -69,14 +69,17 @@
               <legend>Стоимость в сутки (р):</legend>
               <div class="filter-price-box">
                 <label>от
-                  <input class="price-per-day" type="text" name="price-per-day" id="start-price" value="0">
+                  <input class="price-per-day" type="number" name="price-per-day" id="start-price" value="0">
                 </label>
                 <label>до
-                  <input type="text" name="price-per-day" id="end-price" value="3000">
+                  <input type="number" name="price-per-day" id="end-price" value="3000">
                 </label>
-              </div>
-              <div>
-                <!-- здесь будет ползунок-->
+              <div class="range">
+                <div class="scale">
+                  <div class="scale-bar"></div>
+                </div>
+                <div class="range-toggle range-toggle-min"></div>
+                <div class="range-toggle range-toggle-max"></div>
               </div>
             </fieldset>
             <button type="submit" class="btn-filter">Показать</button>

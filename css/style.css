@@ -712,9 +712,7 @@ fieldset {
   padding-left: 0;
 }
 
-.filter-option {
-
-}
+.filter-option {}
 
 .filter-option {
   padding-top: 25px;
@@ -762,21 +760,74 @@ fieldset {
   height: 22px;
   background-color: #FFFFFF;
   position: absolute;
-  top: 7px;
+  top: 50%;
   left: 50%;
   z-index: 1;
+  transform: translate(-50%, -50%);
 }
 
 .filter-price-box input {
   background: transparent;
   border: none;
-  width: 40px;
+  width: 50px;
   height: 34px;
 }
 
 .filter-price-box input[value] {
   color: #FFFFFF;
   font-size: 14px;
+}
+
+.range {
+  position: relative;
+}
+
+.scale {
+  height: 2px;
+  width: 100%;
+
+  position: absolute;
+  left: 0;
+  bottom: -22px;
+
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.scale-bar {
+  height: 2px;
+  width: 80%;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #FFFFFF;
+}
+
+.range-toggle {
+  position: absolute;
+  top: 11px;
+
+  width: 20px;
+  height: 20px;
+
+  background: #ABABAB;
+  border: 8px solid #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.3);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1C4F80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
 }
 
 /* Button
@@ -795,7 +846,7 @@ fieldset {
 
   padding-top: 5px;
   padding-bottom: 5px;
-  margin: 32px auto 36px;
+  margin: 54px auto 36px;
 }
 
 .btn-filter:hover,
