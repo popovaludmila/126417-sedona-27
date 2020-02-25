@@ -62,8 +62,6 @@ a {
   line-height: 26px;
   font-size: 14px;
 
-  padding-left: 72px;
-  padding-right: 72px;
   padding-top: 14px;
   padding-bottom: 16px;
 }
@@ -78,12 +76,18 @@ a {
   width: 25%;
 }
 
+.site-nav li:first-child,
+.site-nav li:nth-child(4n+1) {
+  padding-left: 72px;
+}
+
 .site-nav li:nth-child(4n-1) {
   text-align: right;
 }
 
 .site-nav li:nth-child(4n) {
   text-align: right;
+  padding-right: 72px;
 }
 
 .logo {
@@ -319,33 +323,6 @@ a {
   background-image: url("../img/icon-3.svg");
 }
 
-.search {
-  background-color: #FFFFFF;
-  width: 1200px;
-  border-top: 1px solid transparent;
-}
-
-.search-text {
-  padding-top: 55px;
-  padding-bottom: 35px;
-}
-
-.search strong {
-  color: #000000;
-  font-size: 30px;
-  font-weight: 700;
-}
-
-.search p {
-  font-size: 14px;
-  font-weight: 400;
-  color: #333333;
-
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 30px;
-}
-
 /* Button
 =============== */
 
@@ -401,29 +378,165 @@ a {
   color: #87B5D0;
 }
 
-.btn-calend {
-  background-image: url("../img/calendar1.svg");
-  background-repeat: no-repeat;
-  background-color: transparent;
-  width: 23px;
-  height: 23px;
+/* Search */
 
-  border: none;
+.search {
+  background-color: #FFFFFF;
+  width: 1200px;
+  border-top: 1px solid transparent;
+}
+
+.search-text {
+  padding-top: 55px;
+  padding-bottom: 35px;
+}
+
+.search strong {
+  color: #000000;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.search p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 30px;
+}
+
+.search-box {
+  position: relative;
+  width: 568px;
+  margin: 0 auto;
+}
+
+.modal-search {
+  font-size: 14px;
+  color: #000000;
+  font-weight: 700;
+  line-height: 26px;
+
+  background-color: #FFFFFF;
+
+  width: 568px;
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 86px;
+  left: 0;
   z-index: 1;
 
+  display: block;
 }
 
-.btn-calend svg:hover,
-.btn-calend svg:focus {
-  background-image: url("../img/calendar2.svg");
-  ;
+.modal-hidden {
+  display: none;
 }
 
-.btn-calend svg:active {
-  background-image: url("../img/calendar3.svg");
+.search-form {
+  padding: 55px;
+}
+
+.search-form p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.search-form input {
+  font-family: "PT Sans", Arial, sans-serif;
+  color: #000000;
+  font-weight: 700;
+  font-size: 14px;
+  background-color: #F2F2F2;
+
+  box-sizing: border-box;
+  border: none;
+}
+
+.date {
+  margin-bottom: 30px;
+
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.date input {
+  width: 346px;
+  height: 38px;
+  text-align: left;
+  padding-left: 13px;
+}
+
+.number {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+.number-adults,
+.number-children {
+  width: 114px;
+
+  display: flex;
+}
+
+.number-adults {
+  margin-right: 53px;
+  margin-left: 42px;
+}
+
+.number-children {
+  margin-left: 26px;
+}
+
+.number input {
+  width: 38px;
+  height: 38px;
+  text-align: center;
+}
+
+.search-form input:hover,
+.search-form input:focus {
+  background-color: #EBEBEB;
+}
+
+.search-form input:active {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E5E5;
+}
+
+.btn-calend {
+  width: 21px;
+  height: 22px;
+
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  bottom: 4px;
+  right: 5px;
+  z-index: 1;
+}
+
+.btn-calend svg {
+  position: absolute;
+  bottom: 4px;
+  right: 5px;
+  z-index: 1;
+}
+
+.btn-calend path:hover,
+.btn-calend path:focus {
+  fill: #000000;
+}
+
+.btn-calend path:active {
+  fill: #81B3D2;
 }
 
 .btn-count {
@@ -467,6 +580,7 @@ a {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  width: 1200px;
 
   padding-left: 140px;
   padding-right: 101px;
@@ -549,97 +663,6 @@ a {
 
 .footer-copyright path:active {
   fill: #B2B2B2;
-}
-
-/* Modal
-=============*/
-.modal-search {
-  font-size: 14px;
-  color: #000000;
-  font-weight: 700;
-  line-height: 26px;
-
-  background-color: #FFFFFF;
-
-  width: 568px;
-}
-
-.search-form {
-  padding: 55px;
-}
-
-.search-form p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.search-form input {
-  color: #000000;
-  font-weight: 700;
-  font-size: 14px;
-  text-align: center;
-}
-
-.date {
-  margin-bottom: 30px;
-
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-
-}
-
-.date input {
-  width: 346px;
-  height: 38px;
-  text-align: left;
-  padding-left: 13px;
-}
-
-.number {
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-}
-
-.number-adults,
-.number-children {
-  width: 114px;
-
-  display: flex;
-}
-
-.number-adults {
-  margin-right: 53px;
-  margin-left: 42px;
-}
-
-.number-children {
-  margin-left: 26px;
-}
-
-.number input {
-  width: 38px;
-  height: 38px;
-  text-align: center;
-}
-
-.search-form input {
-  background-color: #F2F2F2;
-  border: none;
-}
-
-.search-form input:hover,
-.search-form input:focus {
-  background-color: #EBEBEB;
-}
-
-.search-form input:active {
-  background-color: #FFFFFF;
-  border: 1px solid #E5E5E5;
 }
 
 /* Catalog.html
@@ -1050,6 +1073,7 @@ a.sorting-icon-current path {
   display: inline-block;
   padding: 3px 16px;
   margin-right: 7px;
+  vertical-align: middle;
 }
 
 .catalog-more:hover,
@@ -1067,6 +1091,7 @@ a.sorting-icon-current path {
 
   display: inline-block;
   padding: 3px 16px;
+  vertical-align: middle;
 }
 
 .catalog-reservation:hover,
