@@ -78,12 +78,12 @@ a {
 }
 
 .site-nav li:first-child,
-.site-nav li:nth-child(4n+1){
+.site-nav li:nth-child(4n+1) {
   padding-left: 72px;
 }
 
 .site-nav li:nth-child(2),
-.site-nav li:nth-child(4n+2){
+.site-nav li:nth-child(4n+2) {
   padding-left: 12px;
 }
 
@@ -92,7 +92,7 @@ a {
   text-align: right;
 }
 
-.site-nav li:nth-child(4n-1){
+.site-nav li:nth-child(4n-1) {
   padding-right: 17px;
 }
 
@@ -134,9 +134,10 @@ a {
 
 .intro {
   background-color: #27404E;
-  background-image: url("../img/background.jpg");
+  background-image: url("../img/intro-mask.svg"),
+    url("../img/background.jpg");
   background-repeat: no-repeat;
-  background-position: 0 -56px;
+  background-position: 0 454px, 0 -56px;
 
   width: 1200px;
   min-height: 724px;
@@ -151,17 +152,6 @@ a {
   background-color: #FFFFFF;
 
   min-height: 216px;
-  position: relative;
-}
-
-.box::before {
-  content: url("../img/polygon.png");
-
-  height: 57px;
-  position: absolute;
-  top: -57px;
-  left: 0;
-  z-index: 1;
 }
 
 .title {
@@ -278,6 +268,37 @@ a {
 .feature-item-one .title {
   padding-top: 31px;
   padding-bottom: 0;
+  margin-top: 76px;
+
+  position: relative;
+}
+
+
+.feature-item-one .title::before {
+  content: '';
+  position: absolute;
+  width: 75px;
+  height: 76px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  bottom: 52px;
+  left: 50%;
+  margin-left: -39px;
+  z-index: 1;
+}
+
+.feature-item-one .title-one::before {
+  background-image: url("../img/icon-1.svg");
+
+}
+
+.feature-item-one .title-two::before {
+  background-image: url("../img/icon-2.svg");
+}
+
+.feature-item-one .title-three::before {
+  background-image: url("../img/icon-3.svg");
 }
 
 .feature-item-grey {
@@ -317,32 +338,6 @@ a {
 
 .feature-item-grey .text {
   padding-top: 23px;
-}
-
-.pic {
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-position: center;
-  vertical-align: top;
-}
-
-.pic-one {
-  width: 75px;
-  height: 76px;
-  background-image: url("../img/icon-1.svg");
-
-}
-
-.pic-two {
-  width: 75px;
-  height: 76px;
-  background-image: url("../img/icon-2.svg");
-}
-
-.pic-three {
-  width: 64px;
-  height: 76px;
-  background-image: url("../img/icon-3.svg");
 }
 
 /* Button
@@ -447,12 +442,7 @@ a {
   top: 86px;
   left: 0;
   z-index: 1;
-
   display: block;
-}
-
-.modal-hidden {
-  display: none;
 }
 
 .search-form {
@@ -491,6 +481,7 @@ a {
   height: 38px;
   text-align: left;
   padding-left: 13px;
+  text-transform: uppercase;
 }
 
 .number {
@@ -533,15 +524,16 @@ a {
 }
 
 .btn-calend {
-  width: 21px;
-  height: 22px;
+  width: 40px;
+  height: 100%;
+  outline: none;
 
   background: url("../img/calendar.svg") no-repeat center;
   background-color: transparent;
   border: none;
   position: absolute;
-  bottom: 10px;
-  right: 8px;
+  bottom: 0;
+  right: 0;
   z-index: 1;
 }
 
@@ -550,7 +542,7 @@ a {
   background: url("../img/calendar_focus.svg") no-repeat center;
 }
 
-.btn-calend path:active {
+.btn-calend:active {
   background: url("../img/calendar_active.svg") no-repeat center;
 }
 
@@ -611,7 +603,7 @@ footer {
 
 }
 
-.footer{
+.footer {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -783,7 +775,7 @@ fieldset {
 .filter-options label:before {
   content: url("../img/checkbox-off.svg");
   display: inline-block;
-  width: 23px;
+  width: 27px;
   height: 23px;
   margin-right: 15px;
 }
@@ -793,6 +785,11 @@ fieldset {
   width: 27px;
   height: 23px;
 }
+
+.filter-options input[type="checkbox"]:hover + label::before,
+.filter-options input[type="checkbox"]:focus + label::before {
+  outline: 3px solid rgb(59, 153, 252);
+ }
 
 .filter-price-box {
   border: 2px solid #FFFFFF;
