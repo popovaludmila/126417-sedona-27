@@ -595,7 +595,7 @@ a {
 /* Footer
 ============== */
 
-.footer {
+footer {
   font-size: 21px;
   color: #000000;
   line-height: 26px;
@@ -615,13 +615,16 @@ a {
   padding-top: 36px;
   padding-bottom: 36px;
 
+}
+
+.footer{
   position: absolute;
   left: 0;
   bottom: 0;
   z-index: 1;
 }
 
-.footer p {
+footer p {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -730,8 +733,6 @@ fieldset {
   text-transform: uppercase;
 
   width: 1200px;
-
-  border-bottom: 1px solid transparent;
 }
 
 .filter {
@@ -741,7 +742,6 @@ fieldset {
   justify-content: space-between;
 
   padding-top: 30px;
-  padding-bottom: 34px;
   padding-right: 72px;
   padding-left: 72px;
 
@@ -754,7 +754,7 @@ fieldset {
 }
 
 .filter-facilities {
-  padding-right: 110px;
+  padding-right: 117px;
 }
 
 .filter fieldset {
@@ -769,10 +769,12 @@ fieldset {
   padding-left: 0;
 }
 
-.filter-option {}
-
 .filter-option {
-  padding-top: 25px;
+  padding-top: 17px;
+}
+
+.filter-options li:first-child {
+  padding-top: 22px;
 }
 
 .filter-option label {
@@ -800,14 +802,18 @@ fieldset {
 
 .filter-price-box {
   border: 2px solid #FFFFFF;
-  width: 318px;
-  margin-top: 10px;
+  width: 319px;
+  margin-top: 7px;
 
   position: relative;
 }
 
-.filter-price-box label {
+.filter-price-box .price-min {
   padding-left: 64px;
+}
+
+.filter-price-box .price-max {
+  padding-left: 72px;
 }
 
 .filter-price-box label::after {
@@ -827,7 +833,8 @@ fieldset {
   background: transparent;
   border: none;
   width: 50px;
-  height: 34px;
+  height: 32px;
+  font: inherit;
 }
 
 .filter-price-box input[value] {
@@ -845,7 +852,7 @@ fieldset {
 
   position: absolute;
   left: 0;
-  bottom: -22px;
+  bottom: -24px;
 
 
   background: rgba(255, 255, 255, 0.3);
@@ -863,7 +870,7 @@ fieldset {
 
 .range-toggle {
   position: absolute;
-  top: 11px;
+  top: 13px;
 
   width: 20px;
   height: 20px;
@@ -899,11 +906,14 @@ fieldset {
   color: #FFFFFF;
 
   display: block;
-  width: 137px;
+  width: 135px;
 
   padding-top: 5px;
   padding-bottom: 5px;
-  margin: 54px auto 36px;
+  margin: auto;
+  margin-right: 98px;
+  margin-top: 54px;
+  margin-bottom: 34px;
 }
 
 .btn-filter:hover,
@@ -921,8 +931,8 @@ fieldset {
   align-items: center;
   justify-content: space-between;
 
-  padding: 30px 72px;
-
+  padding: 28px 72px;
+  padding-top: 32px;
   border-bottom: 1px solid #E5E5E5;
 }
 
@@ -939,9 +949,10 @@ fieldset {
   line-height: 26px;
   font-weight: 700;
 
+  padding: 0;
   margin-top: 0;
   margin-bottom: 0;
-  margin-right: 43px;
+  margin-right: 47px;
 }
 
 .filter-ressult-text span {
@@ -956,6 +967,7 @@ fieldset {
 
   margin-top: 0;
   margin-bottom: 0;
+  padding: 0;
 }
 
 .filter-ressult-text h2 {
@@ -977,7 +989,7 @@ fieldset {
   text-decoration: none;
   border-bottom: 1px dashed #81B3D2;
 
-  margin-right: 30px;
+  margin-right: 34px;
 }
 
 .filter-list a:hover,
@@ -1005,7 +1017,7 @@ a.current-result {
 }
 
 .sorting li:first-child {
-  margin-right: 12px;
+  margin-right: 14px;
 }
 
 a.sorting-icon path:hover,
@@ -1041,7 +1053,7 @@ a.sorting-icon-current path {
   flex-wrap: wrap;
 
   padding-top: 30px;
-  padding-bottom: 23px;
+  padding-bottom: 24px;
   padding-right: 72px;
   padding-left: 72px;
 
@@ -1065,8 +1077,7 @@ a.sorting-icon-current path {
   line-height: 26px;
   font-weight: 700;
 
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .catalog-item a:not(.catalog-img) {
@@ -1083,10 +1094,9 @@ a.sorting-icon-current path {
 .catalog-item p {
   color: #333333;
 
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-bottom: 9px;
-  padding-top: 6px;
+  margin: 0;
+  padding-bottom: 13px;
+  padding-top: 3px;
 }
 
 .catalog-type-one {
@@ -1149,6 +1159,7 @@ a.sorting-icon-current path {
   color: #666666;
   background-color: #F2F2F2;
   padding: 3px 16px;
+  margin-bottom: 5px;
 }
 
 .stars {
