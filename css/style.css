@@ -636,6 +636,9 @@ a {
   flex-direction: row;
 
   padding-right: 70px;
+  max-width: 400px;
+  flex-wrap: wrap;
+
 }
 
 .social-list li:last-child {
@@ -658,6 +661,7 @@ a {
   height: 48px;
   margin-right: 5px;
   margin-bottom: 5px;
+  flex-shrink: 0;
 }
 
 .social-button:hover,
