@@ -71,6 +71,8 @@ a {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+
+  color: #000000;
 }
 
 .site-nav li {
@@ -566,18 +568,18 @@ a {
   color: #000000;
 }
 
-.btn-count:hover {
-  background-color: #EBEBEB;
-}
-
 .btn-count:active {
   color: #87B5D0;
-  background-color: #FFFFFF;
   border: 1px solid #E5E5E5;
 }
 
 
 .map {
+  width: 1200px;
+  height: 597px;
+}
+
+.map img {
   width: 1200px;
   height: 597px;
 }
