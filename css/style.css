@@ -442,6 +442,10 @@ a {
   top: 86px;
   left: 0;
   z-index: 1;
+  display: none;
+}
+
+.modal-search.show {
   display: block;
 }
 

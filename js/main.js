@@ -1,10 +1,8 @@
-var modal = document.querySelector('.modal');
+var modal = document.querySelector('.modal-search');
 var open = document.querySelector('.btn-search');
 console.log(modal);
 
 open.addEventListener('click', function(evt) {
   evt.preventDefault();
-
-  if ()
-  modal.classList.toggle('modal-search');
+  modal.classList.toggle('show');
 });
