@@ -4,5 +4,5 @@ console.log(modal);
 
 open.addEventListener('click', function(evt) {
   evt.preventDefault();
-  modal.classList.toggle('show');
+  modal.classList.toggle('visually-hidden');
 });

@@ -444,10 +444,6 @@ a {
   top: 86px;
   left: 0;
   z-index: 1;
-  display: none;
-}
-
-.modal-search.show {
   display: block;
 }
 
@@ -792,8 +788,9 @@ fieldset {
   height: 23px;
 }
 
-.filter-options input[type="checkbox"]:hover + label::before,
-.filter-options input[type="checkbox"]:focus + label::before {
+.checkbox:hover + label::before,
+.checkbox:focus + label::before,
+.checkbox:active + label::before {
   outline: 3px solid rgb(59, 153, 252);
  }
 
