@@ -770,10 +770,6 @@ fieldset {
   margin-top: 3px;
 }
 
-.filter-options input[type="checkbox"] {
-  display: none;
-}
-
 .filter-options label:before {
   content: url("../img/checkbox-off.svg");
   display: inline-block;
