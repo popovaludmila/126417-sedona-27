@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
-  <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -108,14 +107,14 @@
             <form class="search-form" action="https://echo.htmlacademy.ru" method="POST">
               <div class="date">
                 <label for="datein">Дата заезда:</label>
-                <input type="text" name="datein" id="datein" placeholder="24 Апреля 2017" required>
+                <input type="text" name="datein" id="datein" value="" placeholder="24 Апреля 2017" required>
                 <button class="btn-calend" type="button">
                   <span class="visually-hidden">Календарь</span>
                 </button>
               </div>
               <div class="date">
                 <label for="dateout">Дата выезда:</label>
-                <input type="text" name="dateout" id="dateout" placeholder="4 июля 2017" required>
+                <input type="text" name="dateout" id="dateout" value="" placeholder="4 июля 2017" required>
                 <button class="btn-calend" type="button">
                   <span class="visually-hidden">Календарь</span>
                 </button>
@@ -124,21 +123,21 @@
                 <label for="adults">Взрослые:</label>
                 <div class="number-adults">
                   <button class="btn-count btn-minus" type="button">
-                    <span>-</span>
+                    <span class="minus">-</span>
                   </button>
-                  <input type="text" name="adults" id="adults" min="0" value="2" placeholder="2" required>
+                  <input type="text" name="adults" id="adults" min="0" step="1" value="2" placeholder="2" required>
                   <button class="btn-count btn-plus" type="button">
-                    <span>+</span>
+                    <span class="plus">+</span>
                   </button>
                 </div>
                 <label for="children">Дети:</label>
                 <div class="number-children">
                   <button class=" btn-count btn-minus" type="button">
-                    <span>-</span>
+                    <span class="minus">-</span>
                   </button>
-                  <input type="text" name="children" id="children" min="0" value="0" placeholder="0" required>
+                  <input type="text" name="children" id="children" min="0" step="1" value="0" placeholder="0" required>
                   <button class="btn-count btn-plus" type="button">
-                    <span>+</span>
+                    <span class="plus">+</span>
                   </button>
                 </div>
               </div>
@@ -152,7 +151,12 @@
 
       <section class="map">
         <h2 class="visually-hidden">Карта города Седона</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9067.509482695446!2d-111.76350235355952!3d34.868346326477415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1583005726133!5m2!1sru!2sru" width="1200" height="597" frameborder="0" style="border:0;" allowfullscreen=""></iframe>      </section>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34079.941600484926!2d-111.7561834547767!3d34.86406816782347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1583178214904!5m2!1sru!2sru"
+          width="1200" height="593" frameborder="0" style="border:0;" allowfullscreen>
+        </iframe>
+        <p><img src="img/map.jpg" width="1200" height="593" alt="Карта города Седона"></p>
+      </section>
     </main>
 
     <footer class="footer">
