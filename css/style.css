@@ -432,62 +432,20 @@ a {
 }
 
 @keyframes floatUp {
-  0% {
-    transform: scaleY(0.1);
+  0%{
+    transform: translateY(-86px) scale(0) ;
   }
-
-  40% {
-    transform: scaleY(1.02);
-  }
-
-  60% {
-    transform: scaleY(0.98);
-  }
-
-  80% {
-    transform: scaleY(1.01);
-  }
-
   100% {
-    transform: scaleY(0.98);
-  }
-
-  80% {
-    transform: scaleY(1.01);
-  }
-
-  100% {
-    transform: scaleY(1);
+    transform: translateY(0px) scale(1);
   }
 }
 
 @keyframes floatDown {
+  0%{
+    transform: translateY(0px) scale(1) ;
+  }
   100% {
-    transform: scaleY(0.1);
-  }
-
-  80% {
-    transform: scaleY(1.02);
-  }
-
-  100% {
-    transform: scaleY(0.98);
-  }
-
-  80% {
-    transform: scaleY(1.01);
-  }
-
-  60% {
-    transform: scaleY(0.98);
-  }
-
-  40% {
-    transform: scaleY(1.01);
-  }
-
-  0% {
-    transform: scaleY(1);
+    transform: translateY(-86px) scale(0);
   }
 }
 
@@ -510,6 +468,7 @@ a {
 .floatUp {
   animation-name: floatUp;
   animation-duration: 2s;
+  z-index: 3;
 }
 
 .floatDown {

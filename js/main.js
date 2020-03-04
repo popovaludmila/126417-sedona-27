@@ -10,16 +10,12 @@ var calendar = form.querySelectorAll('.btn-calend');
 datein.focus();
 buttonOpen.addEventListener('click', function (evt) {
   evt.preventDefault();
-  if (!modal.classList.contains('visually-hidden')) {
-    datein.focus();
-    modal.classList.add('visually-hidden');
-    modal.classList.remove('floatUp');
-  } else {
+  if (modal.classList.contains('visually-hidden')) {
     modal.classList.remove('visually-hidden');
     datein.focus();
-    modal.classList.add('floatUp');
+  } else {
+    modal.classList.add('visually-hidden');
   }
-
 });
 
 form.addEventListener('submit', function (evt) {
