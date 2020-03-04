@@ -431,6 +431,66 @@ a {
   margin: 0 auto;
 }
 
+@keyframes floatUp {
+  0% {
+    transform: scaleY(0.1);
+  }
+
+  40% {
+    transform: scaleY(1.02);
+  }
+
+  60% {
+    transform: scaleY(0.98);
+  }
+
+  80% {
+    transform: scaleY(1.01);
+  }
+
+  100% {
+    transform: scaleY(0.98);
+  }
+
+  80% {
+    transform: scaleY(1.01);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes floatDown {
+  100% {
+    transform: scaleY(0.1);
+  }
+
+  80% {
+    transform: scaleY(1.02);
+  }
+
+  100% {
+    transform: scaleY(0.98);
+  }
+
+  80% {
+    transform: scaleY(1.01);
+  }
+
+  60% {
+    transform: scaleY(0.98);
+  }
+
+  40% {
+    transform: scaleY(1.01);
+  }
+
+  0% {
+    transform: scaleY(1);
+  }
+}
+
 .modal-search {
   font-size: 14px;
   color: #000000;
@@ -446,6 +506,17 @@ a {
   z-index: 3;
   display: block;
 }
+
+.floatUp {
+  animation-name: floatUp;
+  animation-duration: 2s;
+}
+
+.floatDown {
+  animation-name: floatDown;
+  animation-duration: 2s;
+}
+
 
 .search-form {
   padding: 55px;
@@ -697,7 +768,7 @@ footer p {
   fill: #81B3D2;
 }
 
-.academy:active  path{
+.academy:active path {
   fill: #B2B2B2;
 }
 
@@ -795,11 +866,11 @@ fieldset {
   height: 23px;
 }
 
-.checkbox:hover + label::before,
-.checkbox:focus + label::before,
-.checkbox:active + label::before {
+.checkbox:hover+label::before,
+.checkbox:focus+label::before,
+.checkbox:active+label::before {
   outline: 3px solid rgb(59, 153, 252);
- }
+}
 
 .filter-price-box {
   border: 2px solid #FFFFFF;
