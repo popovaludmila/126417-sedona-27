@@ -675,7 +675,7 @@ footer p {
   background-color: #5496BD;
 }
 
-.social-button path:active {
+.social-button:active path {
   fill: #87B5D0;
 }
 
@@ -688,16 +688,16 @@ footer p {
   align-items: center;
 }
 
-.footer-copyright a {
+.academy {
   margin-left: 5px;
 }
 
-.footer-copyright path:hover,
-.footer-copyright path:focus {
+.academy:hover path,
+.academy:focus path {
   fill: #81B3D2;
 }
 
-.footer-copyright path:active {
+.academy:active  path{
   fill: #B2B2B2;
 }
 
