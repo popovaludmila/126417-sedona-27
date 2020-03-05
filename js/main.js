@@ -10,16 +10,18 @@ var calendar = form.querySelectorAll('.btn-calend');
 datein.focus();
 buttonOpen.addEventListener('click', function (evt) {
   evt.preventDefault();
-  if (modal.classList.contains('visually-hidden')) {
-    modal.classList.remove('visually-hidden');
+  if (modal.classList.contains('floatdown')) {
+    modal.classList.remove('floDown');
+    modal.classList.add('floatUp')
     datein.focus();
   } else {
-    modal.classList.add('visually-hidden');
+    modal.classList.add('floatDown');
+    modal.classList.remove('floatUp');
   }
 });
 
 form.addEventListener('submit', function (evt) {
-  if (!input.value) {
+  if (input.value === '') {
     evt.preventDefault();
   } else {
     form.submit();
