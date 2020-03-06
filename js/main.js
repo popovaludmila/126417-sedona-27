@@ -10,8 +10,8 @@ var calendar = form.querySelectorAll('.btn-calend');
 datein.focus();
 buttonOpen.addEventListener('click', function (evt) {
   evt.preventDefault();
-  if (modal.classList.contains('floatdown')) {
-    modal.classList.remove('floDown');
+  if (modal.classList.contains('floatDown')) {
+    modal.classList.remove('floatDown');
     modal.classList.add('floatUp')
     datein.focus();
   } else {

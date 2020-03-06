@@ -210,6 +210,7 @@ a {
 .feature-item {
   background-color: #FFFFFF;
   word-wrap: break-word;
+
 }
 
 .feature-item-blue {
@@ -314,6 +315,9 @@ a {
   padding: 50px 72px;
   padding-bottom: 55px;
   background-color: #EEEEEE;
+
+  position: relative;
+  z-index: 5;
 }
 
 .feature-item-grey li {
@@ -347,6 +351,7 @@ a {
 .search {
   background-color: #FFFFFF;
   width: 1200px;
+  position: relative;
   z-index: 5;
 }
 
@@ -412,8 +417,8 @@ a {
 
 @keyframes floatUp {
   from {
-    -webkit-transform: translateY(-500px);
-    transform: translateY(-500px);
+    -webkit-transform: translateY(-395px);
+    transform: translateY(-395px);
   }
   to {
     -webkit-transform: translateY(0);
@@ -427,8 +432,8 @@ a {
     transform: translateY(0);
   }
   to {
-    -webkit-transform: translateY(-500px);
-    transform: translateY(-500px);
+    -webkit-transform: translateY(-395px);
+    transform: translateY(-395px);
   }
 }
 
