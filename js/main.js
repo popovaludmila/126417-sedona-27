@@ -7,13 +7,11 @@ var number = form.querySelector('.number');
 var input = form.querySelectorAll('.input');
 var calendar = form.querySelectorAll('.btn-calend');
 
-datein.focus();
 buttonOpen.addEventListener('click', function (evt) {
   evt.preventDefault();
   if (modal.classList.contains('floatDown')) {
     modal.classList.remove('floatDown');
     modal.classList.add('floatUp')
-    datein.focus();
   } else {
     modal.classList.add('floatDown');
     modal.classList.remove('floatUp');
