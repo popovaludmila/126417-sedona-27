@@ -210,6 +210,7 @@ a {
 .feature-item {
   background-color: #FFFFFF;
   word-wrap: break-word;
+
 }
 
 .feature-item-blue {
@@ -314,6 +315,9 @@ a {
   padding: 50px 72px;
   padding-bottom: 55px;
   background-color: #EEEEEE;
+
+  position: relative;
+  z-index: 5;
 }
 
 .feature-item-grey li {
@@ -342,66 +346,13 @@ a {
   padding-top: 23px;
 }
 
-/* Button
-=============== */
-
-.btn {
-  font-size: 21px;
-  font-weight: 700;
-  line-height: 26px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #FFFFFF;
-  word-wrap: break-word;
-
-  display: block;
-}
-
-.btn-brown {
-  background-color: #766357;
-
-  width: 568px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin: 0 auto;
-}
-
-.btn-brown:hover,
-.btn-brown:focus {
-  background-color: #604E43;
-}
-
-.btn-brown:active {
-  background-color: #503E33;
-  color: #847870;
-}
-
-
-.btn-blue {
-  background-color: #81B3D2;
-
-  width: 458px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  margin: 25px auto 0;
-  margin-bottom: 0;
-}
-
-.btn-blue:hover,
-.btn-blue:focus {
-  background-color: #669EC0;
-}
-
-.btn-blue:active {
-  background-color: #5496BD;
-  color: #87B5D0;
-}
-
 /* Search */
 
 .search {
   background-color: #FFFFFF;
   width: 1200px;
+  position: relative;
+  z-index: 5;
 }
 
 .search-text {
@@ -426,9 +377,55 @@ a {
 }
 
 .search-box {
-  position: relative;
   width: 568px;
   margin: 0 auto;
+}
+
+.map {
+  width: 1200px;
+  height: 597px;
+  position: relative;
+  background: url(../img/map.jpg) center no-repeat;
+}
+
+.map iframe {
+  position: relative;
+  z-index: 1;
+  border: none;
+}
+
+.floatUp {
+  animation-name: floatUp;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.floatDown {
+  animation-name: floatDown;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes floatUp {
+  from {
+    -webkit-transform: translateY(-395px);
+    transform: translateY(-395px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatDown {
+  from {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-395px);
+    transform: translateY(-395px);
+  }
 }
 
 .modal-search {
@@ -441,9 +438,9 @@ a {
 
   width: 568px;
   position: absolute;
-  top: 86px;
-  left: 0;
-  z-index: 1;
+  top: 0;
+  left: 316px;
+  z-index: 2;
   display: block;
 }
 
@@ -454,6 +451,7 @@ a {
 .search-form p {
   margin-top: 0;
   margin-bottom: 0;
+  padding-top: 24px;
 }
 
 .search-form input {
@@ -569,15 +567,56 @@ a {
   border: 1px solid #E5E5E5;
 }
 
+.btn {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFFFFF;
+  word-wrap: break-word;
 
-.map {
-  width: 1200px;
-  height: 597px;
+  display: block;
 }
 
-.map img {
-  width: 1200px;
-  height: 597px;
+.btn-brown {
+  background-color: #766357;
+
+  width: 568px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+}
+
+.btn-brown:hover,
+.btn-brown:focus {
+  background-color: #604E43;
+}
+
+.btn-brown:active {
+  background-color: #503E33;
+  color: #847870;
+}
+
+
+.btn-blue {
+  background-color: #81B3D2;
+
+  width: 458px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin: 25px auto 0;
+  margin-bottom: 0;
+}
+
+.btn-blue:hover,
+.btn-blue:focus {
+  background-color: #669EC0;
+}
+
+.btn-blue:active {
+  background-color: #5496BD;
+  color: #87B5D0;
 }
 
 /* Footer
@@ -609,7 +648,7 @@ footer {
   position: absolute;
   left: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: 3;
 }
 
 footer p {
@@ -664,7 +703,7 @@ footer p {
   background-color: #5496BD;
 }
 
-.social-button path:active {
+.social-button:active path {
   fill: #87B5D0;
 }
 
@@ -677,16 +716,16 @@ footer p {
   align-items: center;
 }
 
-.footer-copyright a {
+.academy {
   margin-left: 5px;
 }
 
-.footer-copyright path:hover,
-.footer-copyright path:focus {
+.academy:hover path,
+.academy:focus path {
   fill: #81B3D2;
 }
 
-.footer-copyright path:active {
+.academy:active path {
   fill: #B2B2B2;
 }
 
@@ -784,11 +823,11 @@ fieldset {
   height: 23px;
 }
 
-.checkbox:hover + label::before,
-.checkbox:focus + label::before,
-.checkbox:active + label::before {
+.checkbox:hover+label::before,
+.checkbox:focus+label::before,
+.checkbox:active+label::before {
   outline: 3px solid rgb(59, 153, 252);
- }
+}
 
 .filter-price-box {
   border: 2px solid #FFFFFF;
