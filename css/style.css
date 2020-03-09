@@ -411,6 +411,7 @@ a {
     -webkit-transform: translateY(-395px);
     transform: translateY(-395px);
   }
+
   to {
     -webkit-transform: translateY(0);
     transform: translateY(0);
@@ -422,10 +423,40 @@ a {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   to {
     -webkit-transform: translateY(-395px);
     transform: translateY(-395px);
   }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+
+.error {
+animation: shake 0.5s;
 }
 
 .modal-search {
@@ -823,11 +854,13 @@ fieldset {
   height: 23px;
 }
 
+/*
 .checkbox:hover+label::before,
 .checkbox:focus+label::before,
 .checkbox:active+label::before {
   outline: 3px solid rgb(59, 153, 252);
 }
+*/
 
 .filter-price-box {
   border: 2px solid #FFFFFF;
