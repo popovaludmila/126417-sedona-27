@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -13,14 +14,14 @@
     <header class="header">
       <nav class="nav">
         <ul class="site-nav">
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта штата</a></li>
-          <li><a href="#" class="current-link"> Гостиницы</a></li>
+          <li><a href="#" tabindex="1">Информация</a></li>
+          <li><a href="#" tabindex="2">Фото и видео</a></li>
+          <li><a href="#" tabindex="4">Карта штата</a></li>
+          <li><a href="#" class="current-link" tabindex="5"> Гостиницы</a></li>
         </ul>
       </nav>
-      <a href="index.html">
-        <img class="logo" src="img/logo-sedona.svg" width="138" height="71" alt="Логотип Седоны">
+      <a class="" href="index.html">
+        <img class="logo" src="img/logo-sedona.svg" width="138" height="71" alt="Логотип Седоны" tabindex="3">
       </a>
     </header>
 
@@ -121,7 +122,7 @@
         <ul class="catalog-list">
           <li class="catalog-item">
             <div class="catalog-info">
-              <a href="#">
+              <a class="img-link" href="#">
                 <img src="img/hotel-1.jpg" class="catalog-img" width="135" height="90"
                   alt="Фото спа-отеля Amara Resort & Spa">
               </a>
@@ -145,7 +146,7 @@
 
           <li class="catalog-item">
             <div class="catalog-info">
-              <a href="#">
+              <a class="img-link" href="#">
                 <img src="img/hotel-2.jpg" class="catalog-img" width="135" height="90"
                   alt="Фото мотеля Desert Quail Inn">
               </a>
@@ -169,7 +170,7 @@
 
           <li class="catalog-item">
             <div class="catalog-info">
-              <a href="#">
+              <a class="img-link" href="#">
                 <img src="img/hotel-3.jpg" class="catalog-img" width="135" height="90"
                   alt="Фото апартаментов Villas at Poco Diablo">
               </a>
