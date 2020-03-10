@@ -33,4 +33,5 @@ number.addEventListener('click', function (evt) {
   } else if (evt.target.classList.contains('btn-minus')) {
     --evt.target.parentElement.querySelector('input').value;
   }
-})
+});
+
