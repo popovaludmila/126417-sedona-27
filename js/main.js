@@ -28,9 +28,9 @@ form.addEventListener('submit', function (e) {
 });
 
 number.addEventListener('click', function (evt) {
-  if (evt.target.classList.contains('btn-plus')) {
+  if (evt.target.classList.contains('btn-plus') || evt.target.classList.contains('plus')) {
     ++evt.target.parentElement.querySelector('input').value;
-  } else if (evt.target.classList.contains('btn-minus')) {
+  } else if (evt.target.classList.contains('btn-minus') || evt.target.classList.contains('minus')) {
     --evt.target.parentElement.querySelector('input').value;
   }
 });
