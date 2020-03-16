@@ -110,9 +110,9 @@ a {
   z-index: 1;
 }
 
-.header a:hover,
-.header a:focus,
-.header a:active {
+.header a:hover img,
+.header a:focus img,
+.header a:active img {
   outline: inherit;
 }
 
@@ -715,6 +715,12 @@ footer {
 
 }
 
+/*.footer-catalog {
+  padding-top: 26px;
+  padding-left: 130px;
+}
+*/
+
 .footer {
   position: absolute;
   left: 0;
@@ -859,12 +865,17 @@ fieldset {
   border: none;
 }
 
-.filter legend {
+.filter legend,
+.filter-price p {
   font-size: 16px;
   font-weight: 700;
 
   padding-right: 0;
   padding-left: 0;
+}
+
+.filter-price p {
+  margin: 0;
 }
 
 .filter-option {

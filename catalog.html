@@ -20,8 +20,8 @@
           <li><a href="#" class="current-link" tabindex="5"> Гостиницы</a></li>
         </ul>
       </nav>
-      <a class="" href="index.html">
-        <img class="logo" src="img/logo-sedona.svg" width="138" height="71" alt="Логотип Седоны" tabindex="3">
+      <a class="" href="index.html" tabindex="3">
+        <img class="logo" src="img/logo-sedona.svg" width="138" height="71" alt="Логотип Седоны">
       </a>
     </header>
 
@@ -60,18 +60,20 @@
                   <label for="filter-motel">Мотель</label>
                 </li>
                 <li class="filter-option">
-                  <input class="checkbox visually-hidden" type="checkbox" name="apartments" id="filter-apartments" checked>
+                  <input class="checkbox visually-hidden" type="checkbox" name="apartments" id="filter-apartments"
+                    checked>
                   <label for="filter-apartments">Апартаменты</label>
                 </li>
               </ul>
             </fieldset>
           </div>
           <div class="filter-group-two">
-            <fieldset class="filter-price">
-              <legend>Стоимость в сутки (р):</legend>
+            <div class="filter-price">
+              <p>Стоимость в сутки (р):</p>
               <div class="filter-price-box">
                 <label class="price-min">от
-                  <input class="price-per-day" type="text" name="price-per-day" id="start-price" value="0" placeholder="0">
+                  <input class="price-per-day" type="text" name="price-per-day" id="start-price" value="0"
+                    placeholder="0">
                 </label>
                 <label class="price-max">до
                   <input type="text" name="price-per-day" id="end-price" value="3000" placeholder="3000">
@@ -83,7 +85,8 @@
                   <div class="range-toggle range-toggle-min"></div>
                   <div class="range-toggle range-toggle-max"></div>
                 </div>
-            </fieldset>
+              </div>
+            </div>
             <button type="submit" class="btn-filter">Показать</button>
           </div>
         </form>
@@ -195,7 +198,7 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="footer-catalog">
       <p class="footer-contacts">
         <a class="contact-link" href="#" aria-label="#Посетить Седону">#visitSEDONA</a><br>
         <a class="contact-tel" href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
