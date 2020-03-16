@@ -52,7 +52,8 @@ a {
 .site-nav,
 .features-list,
 .features-list-one,
-.social-list {
+.social-list,
+.feature-item-grey {
   list-style: none;
   padding: 0;
   margin: 0;
