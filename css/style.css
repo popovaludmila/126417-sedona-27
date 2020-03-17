@@ -569,7 +569,8 @@ a {
   position: absolute;
   width: 12px;
   height: 3px;
-  background-color: #A9A9A9;;
+  background-color: #A9A9A9;
+  ;
   z-index: 2;
   top: 18px;
   right: 14px;
@@ -590,7 +591,7 @@ a {
 
 .btn-count:active .minus::before,
 .btn-count:active .plus::before,
-.btn-count:active .plus::after{
+.btn-count:active .plus::after {
   background-color: #87B5D0;
 }
 
@@ -708,18 +709,21 @@ footer {
   flex-wrap: wrap;
   width: 1200px;
 
-  padding-left: 140px;
+  padding-left: 143px;
   padding-right: 101px;
   padding-top: 36px;
-  padding-bottom: 36px;
+  padding-bottom: 34px;
 
 }
 
-/*.footer-catalog {
+.footer-catalog {
   padding-top: 26px;
   padding-left: 130px;
 }
-*/
+
+.catalog-tel {
+  line-height: 45px;
+}
 
 .footer {
   position: absolute;
@@ -766,9 +770,18 @@ footer p {
 
   width: 46px;
   height: 48px;
-  margin-right: 5px;
-  margin-bottom: 5px;
+  margin-right: 6px;
+  margin-bottom: 7px;
   flex-shrink: 0;
+}
+
+.catalog-social {
+  padding-right: 60px;
+}
+
+.catalog-icon {
+  margin-right: 7px;
+  margin-bottom: 2px;
 }
 
 .social-button:hover,
