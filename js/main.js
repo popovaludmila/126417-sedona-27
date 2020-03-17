@@ -2,10 +2,8 @@ var modal = document.querySelector('.modal-search');
 var buttonOpen = document.querySelector('.btn-search');
 var form = modal.querySelector('.search-form');
 var datein = form.querySelector('#datein');
+var dateout = form.querySelector('#dateout');
 var number = form.querySelector('.number');
-
-var input = form.querySelectorAll('.input');
-var calendar = form.querySelectorAll('.btn-calend');
 
 buttonOpen.addEventListener('click', function (evt) {
   evt.preventDefault();
@@ -18,18 +16,22 @@ buttonOpen.addEventListener('click', function (evt) {
   }
 });
 
-form.addEventListener('submit', function (evt) {
-  if (input.value === '') {
-    evt.preventDefault();
+form.addEventListener('submit', function (e) {
+  if (!datein.value || !dateout.value) {
+    e.preventDefault();
+    modal.classList.remove('error');
+    modal.offsetWidth = modal.offsetWidth;
+    modal.classList.add('error');
   } else {
     form.submit();
   }
 });
 
 number.addEventListener('click', function (evt) {
-  if (evt.target.classList.contains('btn-plus')) {
+  if (evt.target.classList.contains('btn-plus') || evt.target.classList.contains('plus')) {
     ++evt.target.parentElement.querySelector('input').value;
-  } else if (evt.target.classList.contains('btn-minus')) {
+  } else if (evt.target.classList.contains('btn-minus') || evt.target.classList.contains('minus')) {
     --evt.target.parentElement.querySelector('input').value;
   }
-})
+});
+

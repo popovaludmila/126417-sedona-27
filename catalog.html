@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -13,13 +14,13 @@
     <header class="header">
       <nav class="nav">
         <ul class="site-nav">
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта штата</a></li>
-          <li><a href="#" class="current-link"> Гостиницы</a></li>
+          <li><a href="#" tabindex="1">Информация</a></li>
+          <li><a href="#" tabindex="2">Фото и видео</a></li>
+          <li><a href="#" tabindex="4">Карта штата</a></li>
+          <li><a href="#" class="current-link" tabindex="5"> Гостиницы</a></li>
         </ul>
       </nav>
-      <a href="index.html">
+      <a class="" href="index.html" tabindex="3">
         <img class="logo" src="img/logo-sedona.svg" width="138" height="71" alt="Логотип Седоны">
       </a>
     </header>
@@ -59,18 +60,20 @@
                   <label for="filter-motel">Мотель</label>
                 </li>
                 <li class="filter-option">
-                  <input class="checkbox visually-hidden" type="checkbox" name="apartments" id="filter-apartments" checked>
+                  <input class="checkbox visually-hidden" type="checkbox" name="apartments" id="filter-apartments"
+                    checked>
                   <label for="filter-apartments">Апартаменты</label>
                 </li>
               </ul>
             </fieldset>
           </div>
           <div class="filter-group-two">
-            <fieldset class="filter-price">
-              <legend>Стоимость в сутки (р):</legend>
+            <div class="filter-price">
+              <p>Стоимость в сутки (р):</p>
               <div class="filter-price-box">
                 <label class="price-min">от
-                  <input class="price-per-day" type="text" name="price-per-day" id="start-price" value="0" placeholder="0">
+                  <input class="price-per-day" type="text" name="price-per-day" id="start-price" value="0"
+                    placeholder="0">
                 </label>
                 <label class="price-max">до
                   <input type="text" name="price-per-day" id="end-price" value="3000" placeholder="3000">
@@ -82,7 +85,8 @@
                   <div class="range-toggle range-toggle-min"></div>
                   <div class="range-toggle range-toggle-max"></div>
                 </div>
-            </fieldset>
+              </div>
+            </div>
             <button type="submit" class="btn-filter">Показать</button>
           </div>
         </form>
@@ -121,7 +125,7 @@
         <ul class="catalog-list">
           <li class="catalog-item">
             <div class="catalog-info">
-              <a href="#">
+              <a class="img-link" href="#">
                 <img src="img/hotel-1.jpg" class="catalog-img" width="135" height="90"
                   alt="Фото спа-отеля Amara Resort & Spa">
               </a>
@@ -145,7 +149,7 @@
 
           <li class="catalog-item">
             <div class="catalog-info">
-              <a href="#">
+              <a class="img-link" href="#">
                 <img src="img/hotel-2.jpg" class="catalog-img" width="135" height="90"
                   alt="Фото мотеля Desert Quail Inn">
               </a>
@@ -169,7 +173,7 @@
 
           <li class="catalog-item">
             <div class="catalog-info">
-              <a href="#">
+              <a class="img-link" href="#">
                 <img src="img/hotel-3.jpg" class="catalog-img" width="135" height="90"
                   alt="Фото апартаментов Villas at Poco Diablo">
               </a>
@@ -194,14 +198,14 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="footer-catalog">
       <p class="footer-contacts">
         <a class="contact-link" href="#" aria-label="#Посетить Седону">#visitSEDONA</a><br>
-        <a class="contact-tel" href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
+        <a class="contact-tel catalog-tel" href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
       </p>
       <h2 class="visually-hidden">Седона в соцсетях</h2>
-      <ul class="social-list">
-        <li class="social-button">
+      <ul class="social-list catalog-social">
+        <li class="social-button catalog-icon">
           <a href="" aria-label="Твиттер">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15"
               viewBox="0 0 17 15">
@@ -210,14 +214,14 @@
             </svg>
           </a>
         </li>
-        <li class="social-button">
+        <li class="social-button catalog-icon">
           <a href="" aria-label="Фейсбук">
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22">
               <path fill="#FFF" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" />
             </svg>
           </a>
         </li>
-        <li class="social-button">
+        <li class="social-button catalog-icon">
           <a href="" aria-label="Ютуб">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16"
               viewBox="0 0 20 16">
