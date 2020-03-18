@@ -369,7 +369,7 @@ a {
 
 .search-text {
   padding-top: 57px;
-  padding-bottom: 45px;
+  padding-bottom: 47px;
 }
 
 .search strong {
@@ -489,8 +489,8 @@ a {
 }
 
 .search-form {
-  padding: 55px;
-  padding-left: 56px;
+  padding: 57px;
+  padding-left: 58px;
 }
 
 .search-form p {
@@ -525,7 +525,7 @@ a {
   width: 346px;
   height: 38px;
   text-align: left;
-  padding-left: 13px;
+  padding-left: 16px;
   text-transform: uppercase;
 }
 
@@ -613,7 +613,7 @@ a {
   border: none;
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: -2px;
   z-index: 1;
 
 }
@@ -646,6 +646,8 @@ a {
   word-wrap: break-word;
 
   display: block;
+  border: none;
+  outline: none;
 }
 
 .btn-brown {
@@ -672,9 +674,9 @@ a {
   background-color: #81B3D2;
 
   width: 458px;
-  padding-top: 19px;
-  padding-bottom: 13px;
-  margin: 28px auto 0;
+  padding-top: 18px;
+  padding-bottom: 14px;
+  margin: 30px auto 0;
   margin-bottom: 0;
 }
 
@@ -892,6 +894,7 @@ fieldset {
   margin-top: 3px;
 }
 
+
 .filter-options label:before {
   content: url("../img/checkbox-off.svg");
   display: inline-block;
@@ -906,6 +909,25 @@ fieldset {
   height: 23px;
 }
 
+.filter-options input:disabled+label:before {
+  content: url("../img/checkbox-off-disabled.svg");
+  width: 27px;
+  height: 23px;
+}
+
+.filter-options input:disabled+label {
+  color: #6A6A6A;
+}
+
+.filter-options input:disabled:checked+label:before {
+  content: url("../img/checkbox-on-disabled.svg");
+  width: 27px;
+  height: 23px;
+}
+
+.filter-options input:disabled:checked+label{
+  color: #6A6A6A;
+}
 
 .checkbox:hover+label::before,
 .checkbox:focus+label::before,
@@ -1188,17 +1210,9 @@ a.sorting-icon-current path {
   flex-wrap: wrap;
 }
 
-.catalog-title {
-  color: #000000;
 
-  font-size: 21px;
-  font-weight: 700;
 
-  margin: 0;
-  margin-top: -3px;
-}
-
-.catalog-item a:not(.catalog-img) {
+.catalog-row a{
   color: #FFFFFF;
 
   font-weight: 700;
@@ -1209,6 +1223,27 @@ a.sorting-icon-current path {
 
   width: 135px;
   height: 90px;
+}
+
+.catalog-title {
+  color: #000000;
+
+  font-size: 21px;
+  font-weight: 700;
+
+  margin: 0;
+  margin-top: -3px;
+}
+
+.catalog-title:hover,
+.catalog-title:focus {
+  color: #81B3D2;
+  outline: none;
+}
+
+.catalog-title:active {
+  color: #B2B2B2;
+  outline: none;
 }
 
 .catalog-item p {
