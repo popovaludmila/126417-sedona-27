@@ -1133,7 +1133,7 @@ fieldset {
 
 .filter-list a:active {
   border: none;
-  color: #81B3D2;
+  color: #000000;
 }
 
 a.current-result {
