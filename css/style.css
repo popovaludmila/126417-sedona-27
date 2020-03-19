@@ -882,7 +882,7 @@ fieldset {
 }
 
 .filter-option {
-  padding-top: 16px;
+  padding-top: 22px;
 }
 
 .filter-options li:first-child {
@@ -898,6 +898,7 @@ fieldset {
 .filter-options label:before {
   content: url("../img/checkbox-off.svg");
   display: inline-block;
+  vertical-align: middle;
   width: 27px;
   height: 23px;
   margin-right: 12px;
