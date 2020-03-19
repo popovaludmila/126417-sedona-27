@@ -1239,11 +1239,13 @@ a.sorting-icon-current path {
 .catalog-title:focus {
   color: #81B3D2;
   outline: none;
+  cursor: pointer;
 }
 
 .catalog-title:active {
   color: #B2B2B2;
   outline: none;
+  cursor: pointer;
 }
 
 .catalog-item p {
