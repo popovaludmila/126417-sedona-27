@@ -693,7 +693,7 @@ a {
 /* Footer
 ============== */
 
-footer {
+.footer {
   font-size: 21px;
   color: #000000;
   line-height: 26px;
@@ -719,7 +719,7 @@ footer {
   padding-left: 130px;
 }
 
-.footer {
+.footer-index {
   position: absolute;
   left: 0;
   bottom: 0;
